@@ -131,3 +131,22 @@ Alternative Hypothesis(H_1): The distribution of gamelength when firstbaron is m
 
 At a 5% significance level our p value was 0.0011 meaning we reject the null that the distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
 
+For the second test I tested the missingness in firstbaron against towers, there are both categorical variables so I used TVD to test instead of the difference in absolute means
+
+H_0: The probability that firstbaron is missing is the same for Red‑side teams and Blue‑side teams.
+
+H_1: The probability that firstbaron is missing differs between Red‑side teams and Blue‑side teams.
+
+<iframe
+  src="assets/fb_side.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The p-value is much greater than the 0.5 significance level so we fail to reject the null hypothesis. Meaning that the missingness of firstbaron does not depend of the side column
+
+# Hypothesis Testing
+
+
+
