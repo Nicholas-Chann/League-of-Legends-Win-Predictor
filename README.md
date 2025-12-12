@@ -56,13 +56,13 @@ As stated earlier for our problem we are only interested in the team summarizes,
 Here is the head of my cleaned dataframe:
 
 
-| gameid           | side   |   result |   firstblood |   firsttower |   firstmidtower |   firstdragon |   firstherald |   firstbaron |   teamkills |   totalgold |   teamdeaths |   minionkills |   monsterkills |   total cs |   dragons |   barons |   towers |   inhibitors |   void_grubs |   turretplates |   opp_turretplates |   golddiffat15 |   killsat15 |   csdiffat15 |   xpdiffat15 |   assistsat15 |
-|:-----------------|:-------|---------:|-------------:|-------------:|----------------:|--------------:|--------------:|-------------:|------------:|------------:|-------------:|--------------:|---------------:|-----------:|----------:|---------:|---------:|-------------:|-------------:|---------------:|-------------------:|---------------:|------------:|-------------:|-------------:|--------------:|
-| LOLTMNT03_179647 | Blue   |        0 |            0 |            0 |               0 |             0 |             0 |            0 |           3 |       42255 |           13 |           731 |            144 |        875 |         0 |        0 |        3 |            0 |            0 |              1 |                  8 |          -3837 |           0 |          -16 |         -469 |             0 |
-| LOLTMNT03_179647 | Red    |        1 |            1 |            1 |               1 |             1 |             1 |            1 |          13 |       53936 |            3 |           753 |            169 |        922 |         2 |        1 |        9 |            2 |            6 |              8 |                  1 |           3837 |           3 |           16 |          469 |             9 |
-| LOLTMNT06_96134  | Blue   |        1 |            1 |            1 |               1 |             0 |             1 |            1 |          21 |       64669 |           11 |           829 |            199 |       1028 |         3 |        1 |       11 |            3 |            6 |              8 |                  2 |           5069 |          10 |           64 |         2014 |            20 |
-| LOLTMNT06_96134  | Red    |        0 |            0 |            0 |               0 |             1 |             0 |            0 |          10 |       50679 |           21 |           790 |            134 |        924 |         2 |        0 |        2 |            0 |            0 |              2 |                  8 |          -5069 |           5 |          -64 |        -2014 |             8 |
-| LOLTMNT06_95160  | Blue   |        0 |            0 |            0 |               1 |             0 |             0 |            0 |          18 |       51389 |           22 |           717 |            146 |        863 |         0 |        0 |        3 |            0 |            2 |              7 |                 10 |            118 |          10 |          -43 |         1990 |            13 |
+| gameid           | side   |   result |   firstblood |   firsttower |   firstmidtower |   firsttothreetowers |   firstdragon |   firstherald |   firstbaron |   teamkills |   totalgold |   teamdeaths |   minionkills |   monsterkills |   total cs |   dragons |   barons |   towers |   inhibitors |   void_grubs |   turretplates |   opp_turretplates |   golddiffat15 |   killsat15 |   csdiffat15 |   xpdiffat15 |   assistsat15 |
+|:-----------------|:-------|---------:|-------------:|-------------:|----------------:|---------------------:|--------------:|--------------:|-------------:|------------:|------------:|-------------:|--------------:|---------------:|-----------:|----------:|---------:|---------:|-------------:|-------------:|---------------:|-------------------:|---------------:|------------:|-------------:|-------------:|--------------:|
+| LOLTMNT03_179647 | Blue   |        0 |            0 |            0 |               0 |                    0 |             0 |             0 |            0 |           3 |       42255 |           13 |           731 |            144 |        875 |         0 |        0 |        3 |            0 |            0 |              1 |                  8 |          -3837 |           0 |          -16 |         -469 |             0 |
+| LOLTMNT03_179647 | Red    |        1 |            1 |            1 |               1 |                    1 |             1 |             1 |            1 |          13 |       53936 |            3 |           753 |            169 |        922 |         2 |        1 |        9 |            2 |            6 |              8 |                  1 |           3837 |           3 |           16 |          469 |             9 |
+| LOLTMNT06_96134  | Blue   |        1 |            1 |            1 |               1 |                    1 |             0 |             1 |            1 |          21 |       64669 |           11 |           829 |            199 |       1028 |         3 |        1 |       11 |            3 |            6 |              8 |                  2 |           5069 |          10 |           64 |         2014 |            20 |
+| LOLTMNT06_96134  | Red    |        0 |            0 |            0 |               0 |                    0 |             1 |             0 |            0 |          10 |       50679 |           21 |           790 |            134 |        924 |         2 |        0 |        2 |            0 |            0 |              2 |                  8 |          -5069 |           5 |          -64 |        -2014 |             8 |
+| LOLTMNT06_95160  | Blue   |        0 |            0 |            0 |               1 |                    0 |             0 |             0 |            0 |          18 |       51389 |           22 |           717 |            146 |        863 |         0 |        0 |        3 |            0 |            2 |              7 |                 10 |            118 |          10 |          -43 |         1990 |            13 |
 
 
 ## Univariate Analysis
@@ -133,9 +133,9 @@ At a 5% significance level our p value was 0.0011 meaning we reject the null tha
 
 For the second test I tested the missingness in firstbaron against towers, there are both categorical variables so I used TVD to test instead of the difference in absolute means
 
-H_0: The probability that firstbaron is missing is the same for Red‑side teams and Blue‑side teams.
+Null Hypothesis(H₀): The probability that firstbaron is missing is the same for Red‑side teams and Blue‑side teams.
 
-H_1: The probability that firstbaron is missing differs between Red‑side teams and Blue‑side teams.
+Alternative Hypothesis (H₁): The probability that firstbaron is missing differs between Red‑side teams and Blue‑side teams.
 
 <iframe
   src="assets/fb_side.html"
@@ -148,5 +148,30 @@ The p-value is much greater than the 0.5 significance level so we fail to reject
 
 # Hypothesis Testing
 
+For my hypothesis test I wanted to find out if there was a difference in distribution between win rate of teams who destroyed first tower and those who did not. This was the hypothesis that I tested:
+
+Null Hypothesis(H₀): Breaking the first turret does not change win probability
+
+Alternative Hypothesis(H₁): Breaking the first turret changes win probability
+
+<iframe
+  src="assets/hypo_test.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+I found that getting first tower is strongly associated with a higher win rate with a p value of 0.0000999 when tested at a 5% significance level. Therefore we reject the null hypothesis.
+
+# Framing a Prediction Problem
+
+From the previous test we know that firsttower is a big determinator of who wins the game. I want to know how accuratly can you predict the outcome of a game using the data from first tower in addition to mid game data. In particular the columns i am interested in are 
+firstblood, firstdragon, firsttower, firstmidtower, firstthreetowers, turretplates, oppturretplates, and the stat differences at 15 minutes in the game. The model I will be using is a binary classification. I restricted the features I chose to be those observable by 15 minutes into the game. I decided to test the data on team performance rather than individual performance therefore I dropped all rows of the individual playerskeeping only the team data
+
+Preditcion problem: Are we able to accuratly predict the outcome of a game based on early-mid game metrics.
+
+
+# using the baseline model i wanted to see how accuratly we could predict the outcome of the game knowing only the side the team 
+# was on and if they destroyed the first tower
 
 
