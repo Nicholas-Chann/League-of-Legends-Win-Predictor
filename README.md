@@ -115,3 +115,19 @@ In the dataset, I believe that the columns `doublekills`,`triplekills`,	`quadrak
 that we would need in order to conclude that the columns are actually Missing At Random (MAR) would be a binary column containing 1 if the player obtained a kill streak and 0 if they did not.
 
 ## Missingness Dependency
+
+In this part, I am going to test if the missingness of the `firstbaron` column depends on another column like `gamelength`. In a league match baron does not spawn until the 20 minute mark so I want to determine if the missingness is becuase the match is finished before the 20 minute mark or if it was simply not taken. I conducted a test using the absolute difference in mean as my test statistic with a 5% significance level.
+
+Null Hypothesis (H_0): The distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
+
+Alternative Hypothesis(H_1): The distribution of gamelength when firstbaron is missing is NOT the same as the distribution of gamelength when firstbaron is not missing 
+
+<iframe
+  src="assets/abs_diff_fb.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+At a 5% significance level our p value was 0.0011 meaning we reject the null that the distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
+
