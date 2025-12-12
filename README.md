@@ -109,4 +109,9 @@ I first did a groupby on the cleaned data set on firsttower and then calculated 
 
 # Assessment of Missingness
 
-# NMAR Analysis
+## NMAR Analysis
+
+In the dataset, I believe that the columns `doublekills`,`triplekills`,	`quadrakills`, `pentakills` are all Not Missing At Random(NMAR). Looking at the columns, there does not seem to be a trend with the missingness. In an actual League game it is possible that no player achieves a multi-kill streak and in this case the value would be missing because it never occured, meaning that the missingness of the value would depend on itself. An additional data 
+that we would need in order to conclude that the columns are actually Missing At Random (MAR) would be a binary column containing 1 if the player obtained a kill streak and 0 if they did not.
+
+## Missingness Dependency
