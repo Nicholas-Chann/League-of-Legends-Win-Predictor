@@ -65,9 +65,9 @@ Here is the head of my cleaned dataframe:
 | LOLTMNT06_95160  | Blue   |        0 |            0 |            0 |               1 |             0 |             0 |            0 |          18 |       51389 |           22 |           717 |            146 |        863 |         0 |        0 |        3 |            0 |            2 |              7 |                 10 |            118 |          10 |          -43 |         1990 |            13 |
 
 
-# Univariate Analysis
+## Univariate Analysis
 
-I performed a univariate analysis on the distribution of total team gold in the dataset
+I performed a univariate analysis on the distribution of total team gold in the dataset <br>
 
 
 <iframe
@@ -79,9 +79,9 @@ I performed a univariate analysis on the distribution of total team gold in the 
 
 The histogram shows that the distribution of team gold is nearly normal with a slight right skew. This suggests that the data is well-behaved, with totalgold being distributed in a manner that is relatively balanced and serves as a good statistic for analyzing team behavior.
 
-# Bivariate Analysis 
+## Bivariate Analysis 
 
-I performed a biariate analysis on the the statistics of first turret and result to see of the winning teams how many of them destroyed first tower 
+I performed a biariate analysis on the the statistics of first turret and result to see of the winning teams how many of them destroyed first tower <br>
 
 <iframe
   src="assets/first_tower_outcome.html"
