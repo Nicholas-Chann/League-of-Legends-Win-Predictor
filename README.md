@@ -168,8 +168,13 @@ I found that getting first tower is strongly associated with a higher win rate w
 From the previous test we know that firsttower is a big determinator of who wins the game. I want to know how accuratly can you predict the `result` of a game using the data from `firsttower` in addition to mid game data. In particular the columns I am interested in are `firstblood`, `firstdragon`, `firsttower`, `firstmidtower`, `firstthreetowers`, `turretplates`, `oppturretplates`, and the stat differences at 15 minutes in the game. The model I will be using is a binary classification. I restricted the features I chose to be those observable by 15 minutes into the game. I decided to test the data on team performance rather than individual performance therefore I dropped all rows of the individual players keeping only the team data. My **Preditcion problem** is, how accuratly are we able to predict the `result` of a game based on mid game metrics. To evalute my model I will be using a train-test split with 80% training data and 20% test data. This will help ensure that I am not over or under fitting my model. I will also using accuracy because my dataset is well balanced and we simply want to test the correctness of the model.
 
 # Baseline Model
+
 For my baseline model i used a Random Forest Classifier trained on the features `side` and `firsttower`. Both features used are nominal categorical variables. Since `firsttower` is already in binary form I did not have to apply any transformations to it. `side` how ever needed to be OneHotEncoded to give binary values for if the team is on Red or Blue side. 
 
-The results that I got from fitting my model was 
+The results that I got from fitting my model was a training score of 0.6979 with an accuracy score of 0.7067. From the results we can see that the model is not under or over fitting but there is definetely room for improvement. With our current model we are accuretly predicting 70.67% of the data. 
+
+# Final Model
+
+
 
 
