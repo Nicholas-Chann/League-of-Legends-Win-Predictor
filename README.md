@@ -129,7 +129,7 @@ Alternative Hypothesis(H_1): The distribution of gamelength when firstbaron is m
   frameborder="0"
 ></iframe>
 
-At a 5% significance level our p value was 0.0011 meaning we reject the null that the distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
+At a 5% significance level our p value was 0.0012 meaning we reject the null that the distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
 
 For the second test I tested the missingness in firstbaron against towers, there are both categorical variables so I used TVD to test instead of the difference in absolute means
 
@@ -165,13 +165,11 @@ I found that getting first tower is strongly associated with a higher win rate w
 
 # Framing a Prediction Problem
 
-From the previous test we know that firsttower is a big determinator of who wins the game. I want to know how accuratly can you predict the outcome of a game using the data from first tower in addition to mid game data. In particular the columns i am interested in are 
-firstblood, firstdragon, firsttower, firstmidtower, firstthreetowers, turretplates, oppturretplates, and the stat differences at 15 minutes in the game. The model I will be using is a binary classification. I restricted the features I chose to be those observable by 15 minutes into the game. I decided to test the data on team performance rather than individual performance therefore I dropped all rows of the individual playerskeeping only the team data
+From the previous test we know that firsttower is a big determinator of who wins the game. I want to know how accuratly can you predict the `result` of a game using the data from `firsttower` in addition to mid game data. In particular the columns I am interested in are `firstblood`, `firstdragon`, `firsttower`, `firstmidtower`, `firstthreetowers`, `turretplates`, `oppturretplates`, and the stat differences at 15 minutes in the game. The model I will be using is a binary classification. I restricted the features I chose to be those observable by 15 minutes into the game. I decided to test the data on team performance rather than individual performance therefore I dropped all rows of the individual players keeping only the team data. My **Preditcion problem** is, how accuratly are we able to predict the `result` of a game based on mid game metrics. To evalute my model I will be using a train-test split with 80% training data and 20% test data. This will help ensure that I am not over or under fitting my model. I will also using accuracy because my dataset is well balanced and we simply want to test the correctness of the model.
 
-Preditcion problem: Are we able to accuratly predict the outcome of a game based on early-mid game metrics.
+# Baseline Model
+For my baseline model i used a Random Forest Classifier trained on the features `side` and `firsttower`. Both features used are nominal categorical variables. Since `firsttower` is already in binary form I did not have to apply any transformations to it. `side` how ever needed to be OneHotEncoded to give binary values for if the team is on Red or Blue side. 
 
-
-# using the baseline model i wanted to see how accuratly we could predict the outcome of the game knowing only the side the team 
-# was on and if they destroyed the first tower
+The results that I got from fitting my model was 
 
 
