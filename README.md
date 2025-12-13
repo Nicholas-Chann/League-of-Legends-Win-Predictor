@@ -185,6 +185,17 @@ The results that I got from fitting my model was a training score of 0.6979 with
 
  # Fairness Analysis
 
- 
+ I decided to use the evaluation metric of accuracy since our dataset is well balanced and we simple want to test the correctness of the model. I tested this at a 5% significance level.
+
+In my fairness analysis I am going to test the accuracy of my model to determine if my model performs roughly the same for teams playing on both side of the map (red and blue).
+Hypotheses:
+
+- Null Hypothesis (H₀): The model is fair. Its accuracy for predicting the winning team is roughly the same for teams playing on Blue or Red side
+
+- Alternative Hypothesis (H₁): The model is unfair. Its accuracy for predicting the winning team is not the same for teams playing on Blue or Red side
+
+- Test statistic: Difference in accuracy between teams who either on red side or blue side
+
+After performing my permutation test, I got a p-value of 0.315. This is quite high and larger than our 5% significance level, thus we fail to reject the null. This means that our model predicts fairly upon both groups Red and Blue when deciding the outcome of a game. Thus our model is fair and is not viased towards one side over the other.
 
 
