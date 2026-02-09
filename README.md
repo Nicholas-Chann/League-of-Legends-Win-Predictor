@@ -68,15 +68,7 @@ Here is the head of my cleaned dataframe:
 ## Univariate Analysis
 
 I performed a univariate analysis on the distribution of total team gold in the dataset. 
-
-
-
-<iframe
-  src="assets/team_gold_dist.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/c6bf9c0d402b0e73c9c9ef7227b8273b36a1f386/assets/distribution%20of%20teamgold.png)
 
 The histogram shows that the distribution of team gold is nearly normal with a slight right skew. This suggests that the data is well-behaved, with totalgold being distributed in a manner that is relatively balanced and serves as a good statistic for analyzing team behavior.
 
