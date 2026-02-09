@@ -68,6 +68,7 @@ Here is the head of my cleaned dataframe:
 ## Univariate Analysis
 
 I performed a univariate analysis on the distribution of total team gold in the dataset. 
+
 ![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/c6bf9c0d402b0e73c9c9ef7227b8273b36a1f386/assets/distribution%20of%20teamgold.png)
 
 The histogram shows that the distribution of team gold is nearly normal with a slight right skew. This suggests that the data is well-behaved, with totalgold being distributed in a manner that is relatively balanced and serves as a good statistic for analyzing team behavior.
@@ -77,12 +78,7 @@ The histogram shows that the distribution of team gold is nearly normal with a s
 I performed a biariate analysis on the the statistics of first turret and result to see of the winning teams how many of them destroyed first tower.
 
 
-<iframe
-  src="/League-of-Legends-Win-Predictor/assets/first_tower_outcome.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/93aa5281d1034f9a46e3e2b80aa51a7807e492ff/assets/breakingfirsttowerwinratio.png)
 
 According to the plot, teams that destory first tower have a win rate of about 70% while teams who do not destroy first tower win about 30% of the time. This means that the majority of teams who destroy first tower end up winning the match indicating its importance in a match.
 
@@ -114,12 +110,7 @@ Null Hypothesis (H_0): The distribution of gamelength when firstbaron is missing
 
 Alternative Hypothesis(H_1): The distribution of gamelength when firstbaron is missing is NOT the same as the distribution of gamelength when firstbaron is not missing 
 
-<iframe
-  src="assets/abs_diff_fb.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/93aa5281d1034f9a46e3e2b80aa51a7807e492ff/assets/gamelength%20for%20first%20baron.png)
 
 At a 5% significance level our p value was 0.0012 meaning we reject the null that the distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing.
 
@@ -129,12 +120,7 @@ Null Hypothesis(H₀): The probability that firstbaron is missing is the same fo
 
 Alternative Hypothesis (H₁): The probability that firstbaron is missing differs between Red‑side teams and Blue‑side teams.
 
-<iframe
-  src="assets/fb_side.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/93aa5281d1034f9a46e3e2b80aa51a7807e492ff/assets/missingness%20first%20baron%20side.png)
 
 The p-value is much greater than the 0.5 significance level so we fail to reject the null hypothesis. Meaning that the missingness of firstbaron does not depend of the side column
 
@@ -146,12 +132,7 @@ Null Hypothesis(H₀): Breaking the first turret does not change win probability
 
 Alternative Hypothesis(H₁): Breaking the first turret changes win probability
 
-<iframe
-  src="assets/hypo_test.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![img alt](https://github.com/Nicholas-Chann/League-of-Legends-Win-Predictor/blob/93aa5281d1034f9a46e3e2b80aa51a7807e492ff/assets/perm%20test%20firsttower.png)
 
 I found that getting first tower is strongly associated with a higher win rate with a p value of 0.0000999 when tested at a 5% significance level. Therefore we reject the null hypothesis.
 
