@@ -86,7 +86,7 @@ I performed a biariate analysis on the the statistics of first turret and result
 
 
 <iframe
-  src="assets/first_tower_outcome.html"
+  src="/League-of-Legends-Win-Predictor/assets/first_tower_outcome.html"
   width="800"
   height="600"
   frameborder="0"
